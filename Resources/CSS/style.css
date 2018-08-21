@@ -59,7 +59,7 @@ span{
 .section{
   display: flex;
   justify-content: space-between;
-  max-width: 120rem;
+  max-width: 100%;
   margin: auto;
   border: 1px hsl(0, 340%, 25%) solid;
   background-color: hsl(0, 0%, 70%);
@@ -67,30 +67,35 @@ span{
 
 .banner{
   margin: 2rem 1.5rem;
-  max-width: 60%;
+  width: 60%;
 }
 
 .banner img{
-  max-width:100%;
+  width: 100%;
 }
 
 .supporting{
   min-width: 40%;
   max-width: 40%;
+  margin-top: 2rem;
   margin-right: 1.5rem;
-  background-color: purple;
+}
+
+.button,
+.link{
+  font-family: "Roboto Slab";
 }
 
 .button{
   width: 12rem;
   height: 3rem;
-  font-family: "Roboto Slab";
   font-size: 1.2rem;
   padding: 0.5rem;
   border: none;
   color: white;
   background-color: hsl(180, 100%, 25%);
 }
+
 
 .source{
   display: block;
@@ -159,7 +164,7 @@ span{
   flex-direction: column;
   align-items: center;
   width: 30rem;
-  float: left;
+  margin: auto;
 }
 
 .learn h1{
@@ -185,6 +190,7 @@ span{
 
 .campus.section{
   justify-content: space-between;
+  background-color: white;
 }
 
 .campus .content h1{
@@ -198,11 +204,39 @@ span{
 }
 
 .campus .supporting{
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  bottom: 0.1rem;
 }
 
 .campus .panel{
   display: flex;
   align-items: center;
+  margin-top: 0.1rem;
+}
+
+.campus .panel:nth-child(odd){
+  background-color: hsl(0, 0%, 70%);
+}
+
+/*Selects the divs containing the image for each panel*/
+.campus .panel div:first-child{
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+}
+
+/*Selects the divs containing text in each panel*/
+.campus .panel div:last-child{
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+.supporting .panel h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.supporting .panel a{
+  color: hsl(180, 100%, 25%);
 }
