@@ -52,27 +52,35 @@ html{
 }
 
 .section{
-  width: 100rem;
+  max-width: 120rem;
   margin: auto;
+  border: 1px hsl(0, 340%, 25%) solid;
+}
+
+.button{
+  width: 12rem;
+  height: 3rem;
+  font-family: "Roboto Slab";
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  background-color: hsl(180, 100%, 25%);
 }
 
 
 /* HEADER SECTION */
 
-header{
-  width: 100%;
-  background-color: red;
-}
-
-.header{
+.header.section{
   display: flex;
   height: 4rem;
   align-items: center;
+
 }
 
 #logo{
   width: 2.5rem;
   margin-left: 1.5rem;
+  box-shadow: 2px 2px 5px hsl(0, 340%, 25%);
 }
 
 #title{
@@ -80,41 +88,82 @@ header{
   font-family: "Roboto Slab";
   font-size: 1.8rem;
   height: 2rem;
+  margin-left: 5px;
 }
+
 #title span:first-child{
   font-weight: 700;
+  color: hsl(0, 5%, 35%)
 }
 
-nav{
+#title span:last-child{
+  color: hsl(0, 340%, 25%);
+}
+
+.header nav{
   margin-left: auto;
   margin-right: 1rem;
-  background-color: yellow;
 }
 
-nav ul{
+.header nav ul{
   display: flex;
   align-items: center;
   font-size: 1.2rem;
 }
-1
-nav ul li{
+
+.header nav ul li{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  color: hsl(0, 5%, 35%)
 }
+
 
 /*  LEARN SECTION */
 
 .learn.section{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: hsl(195, 80%, 60%);
+  background-color: hsl(0, 0%, 70%);
 }
 
 .learn.banner{
-  width: 60%;
-  height: 60%;
+  margin: 2rem 1.5rem;
+  width: 60rem;
 }
 
 .learn.banner img{
   max-width: 100%;
+}
+
+#learn-container{
+  width: 40%;
+  margin-right: 3rem;
+}
+
+.learn.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  float: left;
+
+}
+
+.learn.content h1{
+  font-size: 3.5rem;
+
+}
+
+.learn.content span{
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.learn.content .button{
+  align-self: flex-end;
+  margin-right: 3rem;
+  width: 16rem;
+  height: 3.5rem;
 }
