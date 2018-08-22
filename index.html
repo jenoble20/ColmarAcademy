@@ -4,13 +4,14 @@
     <title>Colmar Academy</title>
     <link href="Resources/CSS/reset.css" type="text/css" rel="stylesheet">
     <link href="Resources/CSS/style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
 
     <!--HEADER SECTION-->
     <header>
       <div id="header" class="section">
-        <img id="logo" src="Resources/Images/ic-logo.svg">
+        <img id="logo" src="Resources/images/ic-logo.svg">
         <div id="title">
           <p>COLMAR</p>
           <p>ACADEMY</p>
@@ -31,7 +32,7 @@
     <div id="learn" class="section">
 
       <div class="banner">
-        <img src="Resources/Images/banner.jpg">
+        <img src="Resources/images/banner.jpg">
       </div>
 
       <div class="supporting">
@@ -50,8 +51,10 @@
     <div id="campus" class="section">
 
       <div class="banner content">
-        <img src="Resources/Images/information-main.jpg">
-        <h1>It doesn't hurt to keep practicing</h1>
+        <img src="Resources/images/information-main.jpg">
+        <div class="heading">
+          <h2>It doesn't hurt to keep practicing</h2>
+        </div>
         <p class="quote">"Curacbitur bitae libero in ipsum porttitor consequat. Aliquam
           et commodo lectus, nec consequat neque. Sed non accumsan urna.
           Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur
@@ -62,7 +65,7 @@
       <div class="supporting">
         <div class="panel">
           <div>
-            <img src="Resources/Images/information-orientation.jpg">
+            <img src="Resources/images/information-orientation.jpg">
           </div>
           <div>
             <h3>Orientation date</h3>
@@ -72,7 +75,7 @@
         </div>
         <div class="panel">
           <div>
-            <img src="Resources/Images/information-campus.jpg">
+            <img src="Resources/images/information-campus.jpg">
           </div>
           <div>
             <h3>Our campus</h3>
@@ -82,7 +85,7 @@
         </div>
         <div class="panel">
           <div>
-            <img src="Resources/Images/information-guest-lecture.jpg">
+            <img src="Resources/images/information-guest-lecture.jpg">
           </div>
           <div>
             <h3>Our guest lecture</h3>
@@ -98,77 +101,126 @@
 
     <!--BEGIN COURSES SECTION-->
     <div id="courses" class="section">
-      <div id="heading">
+
+      <div class="heading">
         <h2>Start learning</h2>
       </div>
+
       <div class="row">
-      <div class="course">
-        <div>
-          <img src="Resources/Images/course-software.jpg">
+        <div class="course">
+          <div>
+            <img src="Resources/images/course-software.jpg">
+          </div>
+          <div class="description">
+            <h3>Software engineering</h3>
+            <p>COURSES:</p>
+            <p>Web Development, Mobile Developmnent, iOT, APIs</p>
+          </div>
         </div>
-        <div class="description">
-          <h3>Software engineering</h3>
-          <p>COURSES</p>
-          <p>Web Development, Mobile Developmnent, iOT, APIs</p>
+        <div class="course">
+          <div>
+            <img src="Resources/images/course-computer-art.jpg">
+          </div>
+          <div class="description">
+            <h3>Computer Art</h3>
+            <p>COURSES:</p>
+            <p>Imaging & Design, Web Design,
+              Motion Graphics & Visual Effects, Computer Animation</p>
+          </div>
         </div>
-      </div>
-      <div class="course">
-        <div>
-          <img src="Resources/Images/course-computer-art.jpg">
-        </div>
-        <div class="description">
-          <h3>Computer Art</h3>
-          <p>COURSES</p>
-          <p>Imaging & Design, Web Design,
-          Motion Graphics & Visual Effects, Computer Animation</p>
-        </div>
-      </div>
-      <div class="course">
-        <div>
-          <img src="Resources/Images/course-design.jpg">
-        </div>
-        <div class="description">
-          <h3>Design</h3>
-          <p>COURSES</p>
-          <p>User Experience Design, User Research, Visual Design</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="course">
-        <div>
-          <img src="Resources/Images/course-data.jpg">
-        </div>
-        <div class="description">
-          <h3>Data</h3>
-          <p>COURSES</p>
-          <p>Data Science, Big Data, SQL, Data Visualization</p>
+        <div class="course">
+          <div>
+            <img src="Resources/images/course-design.jpg">
+          </div>
+          <div class="description">
+            <h3>Design</h3>
+            <p>COURSES:</p>
+            <p>User Experience Design, User Research, Visual Design</p>
+          </div>
         </div>
       </div>
-      <div class="course">
-        <div>
-          <img src="Resources/Images/course-business.jpg">
-        </div>
-        <div class="description">
-          <h3>Business</h3>
-          <p>COURSES</p>
-          <p>Product Development, Business Development, Startup</p>
-        </div>
-      </div>
-      <div class="course">
-        <div>
-          <img src="Resources/Images/course-marketing.jpg">
-        </div>
-        <div class="description">
-          <h3>Marketing</h3>
-          <p>COURSES</p>
-          <p>Analytics, Content Marketing, Mobile Marketing</p>
-        </div>
-      </div>
-    </div>
 
-    </div>
+      <div class="row">
+        <div class="course">
+          <div>
+            <img src="Resources/images/course-data.jpg">
+          </div>
+          <div class="description">
+            <h3>Data</h3>
+            <p>COURSES:</p>
+            <p>Data Science, Big Data, SQL, Data Visualization</p>
+          </div>
+        </div>
+        <div class="course">
+          <div>
+            <img src="Resources/images/course-business.jpg">
+          </div>
+          <div class="description">
+            <h3>Business</h3>
+            <p>COURSES:</p>
+            <p>Product Development, Business Development, Startup</p>
+          </div>
+        </div>
+        <div class="course">
+          <div>
+            <img src="Resources/images/course-marketing.jpg">
+          </div>
+          <div class="description">
+            <h3>Marketing</h3>
+            <p>COURSES:</p>
+            <p>Analytics, Content Marketing, Mobile Marketing</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!--END COURSES SECTION-->
 
 
+    <!--BEGIN THESIS SECTION-->
+    <div id="thesis" class="section">
+
+      <div class="heading">
+        <h2>Thesis exhibit</h2>
+      </div>
+
+      <div id="content-container">
+        <div class="banner content">
+          <video src="Resources/videos/thesis.mp4" controls></video>
+          <div class="heading">
+            <h2>Reimagine urban</h2>
+          </div>
+          <p class="quote">"Curacbitur vitae libero in ipsum porttitor consequat. Aliquam
+            et commodo lectus, nec consequat neque. Sed non accumsan urna.
+            Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur
+            dolor consequat, tristique ligula."</p>
+          <p class="source">Emanuel, Sr Strategist at Hiring.com</p>
+        </div>
+
+        <div class="supporting">
+          <div class="panel">
+            <div>
+              <img src="Resources/images/thesis-fisma.jpg">
+            </div>
+            <div>
+              <h3>Fisma: Design and Prototype</h3>
+              <p>Designer showcase of new prototype product</p>
+            </div>
+          </div>
+          <div class="panel">
+            <div>
+              <img src="Resources/images/thesis-now-and-then.jpg">
+            </div>
+            <div>
+              <h3>Now and then</h3>
+              <p>Research study about New York</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!--END THESIS SECTION-->
+
+
+    <!-- FOOTER -->
 
   </body>
