@@ -41,20 +41,27 @@
 
 html{
   font-family: "Open Sans";
-  font-size: 18px;
+  font-size: 22px;
 }
 
 p{
   line-height: 1.5;
-  white-space: normal;
+}
+
+a{
+  font-family: "Roboto Slab";
+  color: hsl(180, 100%, 25%);
+  transition: all 1s ease-out;
+}
+
+a:hover{
+  color: hsl(0, 340%, 25%);
 }
 
 .section{
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  margin: auto;
-  border: 1px hsl(0, 340%, 25%) solid;
+  box-shadow: 0 -1px 4px;
   background-color: hsl(0, 0%, 70%);
 }
 
@@ -65,6 +72,7 @@ p{
 
 .banner img{
   width: 100%;
+  border: 2px solid hsl(180, 100%, 25%);
 }
 
 .supporting{
@@ -79,59 +87,12 @@ p{
   font-family: "Roboto Slab";
 }
 
-.button{
-  width: 12rem;
-  height: 3rem;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  border: none;
-  color: white;
-  background-color: hsl(180, 100%, 25%);
-}
-
 .heading{
   width: 100%;
   display: block;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin: 2rem 0;
-}
-
-.source{
-  display: block;
-  margin-top: 2rem;
-  font-style: italic;
-}
-
-.panel{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-top: 0.1rem;
-}
-
-/*Selects the divs containing the image for each panel*/
-.panel div:first-child{
-  width: 35%;
-}
-
-.panel img{
-  width: 100%;
-  height: auto;
-  margin: 1rem;
-}
-
-.supporting .panel h3{
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-/*Selects the divs containing text in each panel*/
-.panel div:last-child{
-  margin-left: 2.5rem;
-  font-size: 1.2rem;
-  max-width: 58%;
 }
 
 
@@ -140,7 +101,6 @@ p{
 #header.section{
   height: 4rem;
   align-items: center;
-
 }
 
 #logo{
@@ -175,14 +135,30 @@ p{
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  padding: 0.8rem 0rem;
+  border-radius: 10px;
+  transition: all 1.3s ease-out;
+}
+
+#header nav ul:hover{
+  background-color: hsl(0, 0%, 65%);
+  box-shadow: -3px 5px 10px;
 }
 
 #header nav ul li{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  color: hsl(0, 5%, 35%)
+  color: hsl(0, 5%, 35%);
 }
 /***/
+
+
+
+.source{
+  display: block;
+  margin-top: 2rem;
+  font-style: italic;
+}
 
 
 
@@ -212,9 +188,30 @@ p{
   margin-bottom: 2rem;
 }
 
-#learn .content .button{
-  width: 16rem;
-  height: 3.5rem;
+#learn .button{
+  width: 20rem;
+  height: 7rem;
+  font-size: 2rem;
+  border: none;
+  background-color: hsl(180, 100%, 25%);
+  border-radius: 10px;
+  transition: all 1s ease-out;
+}
+
+#learn .button:hover{
+  transform: scale(1.4);
+  background-color: hsl(180, 100%, 15%);
+  box-shadow: -9px 12px 18px;
+}
+
+#learn .button a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
 }
 /***/
 
@@ -222,26 +219,56 @@ p{
 
 #campus.section,
 #thesis.section{
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
 }
 
-
-
-/* CAMPUS SECTION */
-#campus.section{
-  background-color: white;
+.panel{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 0.1rem;
+  border-radius: 10px;
+  transition: background-color 1.3s ease-out,
+              box-shadow 1.4s ease-out;
 }
 
-#campus .panel:nth-child(even){
+.panel:hover{
+  background-color:
+}
+
+/*Selects the divs containing the image for each panel*/
+.panel div:first-child{
+  width: 35%;
+}
+
+.panel img{
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+}
+
+.supporting .panel h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/*Selects the divs containing text in each panel*/
+.panel div:last-child{
+  margin-left: 2.5rem;
+  font-size: 1.2rem;
+  max-width: 58%;
+}
+
+.panel:nth-child(even){
   background-color: hsl(0, 0%, 70%);
 }
 
-#campus .supporting .panel a{
-  color: hsl(180, 100%, 25%);
+/* CAMPUS SECTION */
+#campus.section{
+  background-color: hsl(0, 0%, 100%);
 }
 /***/
-
-
 
 #courses.section .heading,
 #thesis.section .heading{
@@ -262,12 +289,14 @@ p{
   justify-content: space-around;
   width: 100%;
   margin: 1rem 4.5rem;
+  background-color: hsl(0, 340%, 25%);
 }
 
 .course{
   width: 33%;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   margin: 2rem 1rem;
+  border-radius: 15px;
 }
 
 .course img{
@@ -276,7 +305,7 @@ p{
 }
 
 .course h3{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   margin: 1rem 0;
 }
@@ -292,6 +321,7 @@ p{
 #thesis.section{
   flex-direction: column;
 }
+
 #thesis .heading{
   width: 100%;
   margin: 2rem 0;
@@ -302,15 +332,37 @@ p{
 }
 
 #thesis .banner.content .heading{
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 #thesis .content video{
   width: 100%;
   height: auto;
+  border: 2px solid hsl(180, 100%, 25%);
 }
 
-#thesis .panel:nth-child(even){
-  background-color: hsl(0, 0%, 70%);
+#thesis .source{
+  margin-bottom: 2rem;
 }
 /***/
+
+
+
+/* FOOTER SECTION */
+
+#footer.section{
+  justify-content: space-between;
+}
+
+#footer p{
+  margin: 1rem 1.5rem;
+}
+
+#terms-privacy{
+  display: flex;
+  margin-right: 1.5rem;
+}
+
+#terms-privacy p{
+  margin: 1rem 1rem;
+}
