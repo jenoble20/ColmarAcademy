@@ -51,9 +51,9 @@ html{
   font-size: 18px;
 }
 
-span{
-  display: inline-block;
+p{
   line-height: 1.5;
+  white-space: normal;
 }
 
 .section{
@@ -96,16 +96,16 @@ span{
   background-color: hsl(180, 100%, 25%);
 }
 
-
 .source{
   display: block;
   margin-top: 2rem;
+  font-style: italic;
 }
 
 
 /* HEADER SECTION */
 
-.header.section{
+#header.section{
   height: 4rem;
   align-items: center;
 
@@ -125,27 +125,27 @@ span{
   margin-left: 5px;
 }
 
-#title span:first-child{
+#title p:first-child{
   font-weight: 700;
   color: hsl(0, 5%, 35%)
 }
 
-#title span:last-child{
+#title p:last-child{
   color: hsl(0, 340%, 25%);
 }
 
-.header nav{
+#header nav{
   margin-left: auto;
   margin-right: 1rem;
 }
 
-.header nav ul{
+#header nav ul{
   display: flex;
   align-items: center;
   font-size: 1.2rem;
 }
 
-.header nav ul li{
+#header nav ul li{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   color: hsl(0, 5%, 35%)
@@ -154,33 +154,32 @@ span{
 
 /*  LEARN SECTION */
 
-.learn.section{
+#learn.section{
   justify-content: space-between;
   align-items: center;
 }
 
-.learn .content{
+#learn .content{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30rem;
   margin: auto;
+  text-align: center;
 }
 
-.learn h1{
+#learn h1{
   font-size: 3.5rem;
   font-weight: 700;
 }
 
-.learn .content span{
+#learn .content p{
   font-size: 1.5rem;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
 
-.learn .content .button{
-  align-self: flex-end;
-  margin-right: 3rem;
+#learn .content .button{
   width: 16rem;
   height: 3.5rem;
 }
@@ -188,55 +187,99 @@ span{
 
 /* CAMPUS SECTION */
 
-.campus.section{
+#campus.section{
   justify-content: space-between;
   background-color: white;
 }
 
-.campus .content h1{
+#campus .content h1{
   font-size: 2.5rem;
   font-weight: 700;
   margin: 2rem 0;
 }
 
-.campus .content span{
-  width: 95%;
+#campus .content p{
+  width: 100%;
 }
 
-.campus .supporting{
+#campus .supporting{
   position: relative;
   bottom: 0.1rem;
 }
 
-.campus .panel{
+#campus .panel{
   display: flex;
   align-items: center;
   margin-top: 0.1rem;
 }
 
-.campus .panel:nth-child(odd){
+#campus .panel:nth-child(odd){
   background-color: hsl(0, 0%, 70%);
 }
 
 /*Selects the divs containing the image for each panel*/
-.campus .panel div:first-child{
+#campus .panel div:first-child{
   width: 35%;
   height: auto;
   margin: 1rem;
 }
 
 /*Selects the divs containing text in each panel*/
-.campus .panel div:last-child{
-  margin-left: 2rem;
+#campus .panel div:last-child{
+  margin-left: 2.5rem;
   font-size: 1.2rem;
 }
 
-.supporting .panel h3{
+#campus .supporting .panel h3{
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.supporting .panel a{
+#campus .supporting .panel a{
   color: hsl(180, 100%, 25%);
+}
+
+
+/* BEGIN COURSES SECTION */
+
+#courses.section{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#courses.section #heading{
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 1rem 4.5rem;
+}
+
+.course{
+  width: 29.556rem;
+  background-color: white;
+  margin: 2rem 1rem;
+}
+
+.course img{
+  height: auto;
+}
+
+.course h3{
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.course p{
+  margin: 1rem 1rem;
 }

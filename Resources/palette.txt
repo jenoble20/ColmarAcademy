@@ -1,0 +1,10 @@
+accent red
+hsl(0, 340%, 25%);
+
+accent blue
+hsl(180, 100%, 25%);
+
+background grey
+hsl(0, 0%, 70%);
+
+
