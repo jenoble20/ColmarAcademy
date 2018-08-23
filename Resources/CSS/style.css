@@ -44,6 +44,17 @@ html{
   font-size: 22px;
 }
 
+@media only screen and (max-width: 1800px){
+  html{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1400px){
+  html{
+    font-size: 14px;
+  }
+}
+
 p{
   line-height: 1.5;
 }
@@ -75,6 +86,12 @@ a:hover{
   border: 2px solid hsl(180, 100%, 25%);
 }
 
+@media only screen and (max-width: 1024px){
+  .banner img{
+    border: none;
+  }
+}
+
 .supporting{
   min-width: 40%;
   max-width: 40%;
@@ -95,10 +112,30 @@ a:hover{
   margin: 2rem 0;
 }
 
+@media only screen and (max-width: 1024px){
+  .section{
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  .supporting{
+    min-width: 100%;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  .banner{
+    margin: 0;
+  }
+}
 
 
 /* HEADER SECTION */
 #header.section{
+  flex-direction: row !important;
   height: 4rem;
   align-items: center;
 }
@@ -150,15 +187,41 @@ a:hover{
   margin-right: 0.5rem;
   color: hsl(0, 5%, 35%);
 }
-/***/
 
-
-
-.source{
-  display: block;
-  margin-top: 2rem;
-  font-style: italic;
+#mobile-menu{
+  display: none;
 }
+
+@media only screen and (max-width: 1024px){
+  #header.section{
+    height: 4.57rem;
+  }
+}
+
+@media only screen and (max-width: 700px){
+
+  #desktop-menu,
+  #title{
+    display: none;
+
+  }
+  #mobile-menu{
+    display: block;
+    width: 50%;
+  }
+
+  #mobile-menu ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #mobile-menu ul li{
+  width: 10rem;
+  height: inherit;
+  }
+}
+/***/
 
 
 
@@ -209,9 +272,41 @@ a:hover{
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  color: white;
   width: 100%;
   height: 100%;
-  color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 1800px){
+  #learn .button:hover{
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 1024px){
+
+  #learn .banner{
+    width: 100%;
+    margin: 0;
+  }
+
+  #learn .content h1{
+    width: 100%;
+    font-size: 2.8rem;
+    margin: 2.29rem 1.14rem;
+  }
+
+  #learn .content p{
+    margin: 0 0 1.71rem;
+  }
+
+  #learn .content .button{
+    margin-bottom: 2.29rem;
+  }
+
+  #learn .button:hover{
+    transform: scale(1.1);
+  }
 }
 /***/
 
@@ -222,18 +317,18 @@ a:hover{
   background-color: hsl(0, 0%, 100%);
 }
 
+
+
 .panel{
   display: flex;
   width: 100%;
   align-items: center;
   margin-top: 0.1rem;
+  border-top: 1px solid hsl(180, 100%, 25%);
+  border-bottom: 1px solid hsl(180, 100%, 25%);
   border-radius: 10px;
   transition: background-color 1.3s ease-out,
               box-shadow 1.4s ease-out;
-}
-
-.panel:hover{
-  background-color:
 }
 
 /*Selects the divs containing the image for each panel*/
@@ -245,6 +340,10 @@ a:hover{
   width: 100%;
   height: auto;
   margin: 1rem;
+}
+
+.panel .mobile-image{
+  display: none;
 }
 
 .supporting .panel h3{
@@ -264,9 +363,53 @@ a:hover{
   background-color: hsl(0, 0%, 70%);
 }
 
+.source{
+  display: block;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1024px){
+
+  .panel{
+    flex-direction: column;
+  }
+
+  .panel .desktop-image{
+    display: none;
+  }
+
+  .panel .mobile-image{
+    display: block;
+  }
+
+  #campus .panel div:first-child{
+    position: relative;
+    right: 1rem;
+    margin: 1.14rem auto;
+    width: 90%;
+  }
+
+  .supporting .panel h3{
+    font-size: 2.3rem;
+  }
+
+  .panel div:last-child{
+    margin: 2.29rem auto;
+  }
+}
+
+
+
 /* CAMPUS SECTION */
 #campus.section{
   background-color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 700px){
+  #campus .banner{
+    display: none;
+  }
 }
 /***/
 
@@ -287,7 +430,7 @@ a:hover{
 .row{
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
   margin: 1rem 4.5rem;
   background-color: hsl(0, 340%, 25%);
 }
@@ -312,6 +455,30 @@ a:hover{
 
 .course p{
   margin: 1rem 1rem;
+}
+
+@media only screen and (max-width: 700px){
+
+  .row{
+    flex-direction: column;
+  }
+
+  #courses .row:first-child{
+    margin-bottom: 0;
+  }
+  #courses .row:last-child{
+    margin-top: 0;
+  }
+
+  .course div:first-child,
+  .course .description p{
+    display: none;
+  }
+
+  .course{
+    width: 95%;
+    padding: 1.14rem 0;
+  }
 }
 /***/
 
@@ -344,6 +511,20 @@ a:hover{
 #thesis .source{
   margin-bottom: 2rem;
 }
+
+@media only screen and (max-width: 1024px){
+  #content-container{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  #content-container .supporting,
+  #content-container .heading,
+  #content-container p{
+    display: none;
+  }
+}
 /***/
 
 
@@ -351,6 +532,7 @@ a:hover{
 /* FOOTER SECTION */
 
 #footer.section{
+  flex-direction: row !important;
   justify-content: space-between;
 }
 
