@@ -235,12 +235,13 @@ a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30rem;
+  width: 50%;;
   margin: auto;
   text-align: center;
 }
 
 #learn h1{
+  width: 100%;
   font-size: 3.5rem;
   font-weight: 700;
 }
@@ -307,6 +308,12 @@ a:hover{
 
   #learn .button:hover{
     transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 700px){
+  #learn{
+    text-align: left;
   }
 }
 /***/
