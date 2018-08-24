@@ -264,7 +264,8 @@ a:hover{
 #learn .button:hover{
   transform: scale(1.4);
   background-color: hsl(180, 100%, 15%);
-  box-shadow: -9px 12px 18px;
+  color: hsl(0, 34%, 25%);
+  box-shadow: 0 0 15px 5px;
 }
 
 #learn .button a{
@@ -327,8 +328,25 @@ a:hover{
   border-top: 1px solid hsl(180, 100%, 25%);
   border-bottom: 1px solid hsl(180, 100%, 25%);
   border-radius: 10px;
-  transition: background-color 1.3s ease-out,
-              box-shadow 1.4s ease-out;
+  transition: background-color 1.0s ease-out 0.1s, color 1.2s ease-out 0.1s;
+              transform 1.7s ease-out;
+              box-shadow 1.4s ease-in-out;
+}
+
+.panel:hover{
+  background-color: hsl(180, 100%, 25%);
+  box-shadow: -3px 5px 10px;
+  z-index = 10;
+  color: white;
+}
+
+.panel a{
+  transition: all 1s ease-out 0.2s;
+}
+
+.panel:hover a{
+  color: white;
+  font-size: 130%;
 }
 
 /*Selects the divs containing the image for each panel*/
@@ -357,10 +375,6 @@ a:hover{
   margin-left: 2.5rem;
   font-size: 1.2rem;
   max-width: 58%;
-}
-
-.panel:nth-child(even){
-  background-color: hsl(0, 0%, 70%);
 }
 
 .source{
@@ -430,6 +444,7 @@ a:hover{
 .row{
   display: flex;
   justify-content: space-around;
+  top: 0;
   width: 90%;
   margin: 1rem 4.5rem;
   background-color: hsl(0, 340%, 25%);
@@ -440,11 +455,20 @@ a:hover{
   background-color: hsl(0, 0%, 100%);
   margin: 2rem 1rem;
   border-radius: 15px;
+  transition: all 1s ease-out 0.2s;
+}
+
+.course:hover{
+  color: white;
+  background-color: hsl(180, 100%, 25%);
+  box-shadow: 0px 0px 10px 3px;
+  transform: scale(1.05);
 }
 
 .course img{
   width: 100%;
   height: auto;
+  border-radius: 15px 15px 0 0;
 }
 
 .course h3{
@@ -461,6 +485,10 @@ a:hover{
 
   .row{
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0
+    margin-right: 0
   }
 
   #courses .row:first-child{
@@ -476,7 +504,7 @@ a:hover{
   }
 
   .course{
-    width: 95%;
+    width: 90%;
     padding: 1.14rem 0;
   }
 }
